@@ -1,0 +1,69 @@
+body{
+    transition: 2s;
+}
+.parent{
+    display: grid;
+    place-items: center;
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    background-color: rgb(248, 248, 239);
+    margin: 30vh auto;
+    width: 20vw;
+    height: 30vh;
+    box-shadow: inset 10px 10px 10px rgb(179, 182, 171),
+    inset -8px -8px 8px rgb(88, 88, 83);
+    transition: 2s;
+    max-width: 350px;
+    min-width: 250px;
+}
+
+.parent:hover{
+    transform: scale(1.1);
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+.watch{
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    border-radius: 20px;
+    -webkit-text-stroke: 1px rgb(26, 24, 24);
+    /* color: transparent; */
+    -webkit-text-fill-color: rgb(46, 46, 43);
+
+    /* border: 2px solid black; */
+    margin: 20px auto;
+    background-color: rgb(142, 235, 184);
+    box-shadow: inset 5px 5px 5px rgb(179, 182, 171),
+    inset -5px -5px 5px rgb(88, 88, 83);
+    mix-blend-mode: multiply;
+    width: 15vw;
+    height: 15vh;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.watch:hover{
+    transform: scale(1.09);
+    /* transform: rotate(360deg); */
+    cursor: pointer;   
+}
+
+.parent2{
+   display: flex;
+    /* border: 2px solid red; */
+    margin-top: -40px;
+}
+
+.child{
+    display: inline;
+    /* border: 2px solid rgb(30, 26, 26); */
+    border-radius:20%;
+    margin: 12px;
+    font-size: 40px;
+}
+
+.child:hover{
+    transform: scale(1.23);
+    cursor: pointer;
+}
