@@ -2,24 +2,24 @@ const startwatch = document.querySelector('.watch');
 const start = document.querySelector('.Play');
 const pause = document.querySelector('.stop');
 const parent = document.querySelector('.parent')
-let sec = 0, min = 0, hours = 0;
+let milisec = 0, sec = 0, min = 0;
 let clear;
 const Play = () => {
     if (start.innerHTML == '▶️') {
         start.innerHTML = '⏸️';
         clear = setInterval(() => {
-            startwatch.innerHTML = `${hours > 9 ? hours : "0" + hours}:${min > 9 ? min : '0' + min}:${sec > 9 ? sec : '0' + sec}`;
-            sec++;
+            startwatch.innerHTML = `${min > 9 ?min : "0" +min}:${sec > 9 ? sec : '0' + sec}:${milisec > 9 ? milisec : '0' +milisec}`;
+            milisec++;
+            if (milisec == 100) {
+                milisec = 0;
+                sec++;
+            }
             if (sec == 60) {
                 sec = 0;
                 min++;
             }
-            if (min == 60) {
-                min = 0;
-                hours++;
-            }
 
-        }, 1000)
+        }, 10)
     }
     else {
         start.innerHTML = '▶️';
